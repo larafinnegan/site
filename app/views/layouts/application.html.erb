@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Site</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="jumbotron">
+<span class="name">Lara Finnegan</span>
+<div class="btn-group" role="group" aria-label="label">
+<button type="button" class="btn btn-default">About</button>
+  <button type="button" class="btn btn-default">Blog</button>
+  <button type="button" class="btn btn-default">Projects</button>
+  <button type="button" class="btn btn-default">Resume</button>
+  <button type="button" class="btn btn-default">Contact</button>
+</div>
+ <div class="container">
+<%= yield %>
+</div>
+</div>
+
+</body>
+</html>
