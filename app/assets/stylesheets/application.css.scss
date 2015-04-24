@@ -1,22 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require bootstrap-sprockets
-//= require_tree .
-//= require_self
 
-.navbar-brand,
-.navbar-nav li a {
-    padding-top:140px;
-}
-
-.navbar {
-  background: transparent;
-  border: none;
-}
 
 .col-md-2, .col-md-8, .col-md-6, .col-md-1 {
   border: 1px solid black;
