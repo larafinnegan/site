@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+/*
 $(function() {
     var div = $('.dynamicheight');
     var width = div.width();
@@ -26,3 +27,4 @@ $(function() {
     text.css('margin-top', ((width - childheight) / 2));    
 });
 
+*/
