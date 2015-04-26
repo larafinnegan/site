@@ -15,16 +15,3 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-
-/*
-$(function() {
-    var div = $('.dynamicheight');
-    var width = div.width();
-    var text = $('.circletext');
-    var childheight = text.height();
-    
-    div.css('height', width);
-    text.css('margin-top', ((width - childheight) / 2));    
-});
-
-*/
