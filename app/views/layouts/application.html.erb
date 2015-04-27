@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div id="wrapper">
   <header id="site-header">
     <div class="container-fluid">
       <div class="row">
@@ -46,37 +47,38 @@
     </div><!-- end div class="container" -->
   </div> <!-- end div class="navbar navbar-default navbar-fixed-top" -->
 
-  <div class="container">
+  <div class="container main-container">
     <%= yield %>
   </div><!-- /.container-fluid -->
 
   <div class="footer">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row footer-main">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
           <div class="row">
-            <div class="col-md-1">
+            <div class="col-xs-2 col-sm-2 col-md-1">
               <span class="glyphicon glyphicon-earphone"></span>
             </div>
-            <div class="col-md-2 text"><b>Call</b><br/>T: 207-504-6930</div>
-            <div class="col-md-1">
+            <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Call</b><br/>T: 207-504-6930</div>
+            <div class="col-xs-2 col-sm-2 col-md-1">
               <span class="glyphicon glyphicon-envelope"></span>
             </div>
-            <div class="col-md-2 text"><b>Contact</b><br/>lcfinnegan@gmail.com</div>
-            <div class="col-md-1">
+            <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Contact</b><br/>lcfinnegan@gmail.com</div>
+            <div class="col-xs-2 col-sm-2 col-md-1">
               <span class="glyphicon glyphicon-plus"></span>
             </div>
-            <div class="col-md-2 text"><b>Social Media</b><br/>
+            <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Social Media</b><br/>
                 <%= link_to image_tag("Linkedin.png", class: "img-responsive social-img"), "https://www.linkedin.com/in/larafinnegan", target: "_blank"  %>
                 <%= link_to image_tag("Github.png", class: "img-responsive social-img"), "https://github.com/larafinnegan", target: "_blank" %>
                 <%= link_to image_tag("Facebook.png", class: "img-responsive social-img"), "https://www.facebook.com/larafinnegan", target: "_blank" %>
                 <%= link_to image_tag("Googleplus.png", class: "img-responsive social-img"), "https://plus.google.com/u/0/+LaraFinnegan/posts", target: "_blank" %>
                 </div>
-            <div class="col-md-1">
-              <span class="glyphicon glyphicon-plus"></span>
+            <div class="col-xs-2 col-sm-2 col-md-1">
+              <span class="glyphicon glyphicon-copyright-mark"></span>
             </div>
-            <div class="col-md-2 text">© 2015 by Lara Finnegan</div>
+            <div class="col-xs-10 col-sm-10 col-md-2 text">© 2015 by Lara Finnegan</div>
           </div>
+        </div>
         </div>
         </div>
         </div>
