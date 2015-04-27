@@ -206,13 +206,13 @@ body {
   .nopadding {
     float: left;
     position: relative;
-    left: 50%;
+    left: 47%;
   }
 
   .circle {
     float: left;
     position: relative;
-    left: -50%;
+    left: -47%;
   }
 
   .three {
@@ -220,7 +220,7 @@ body {
   }
 
   .about {
-    padding-top: 3%;
+    padding-top: 8%;
     padding-bottom: 6%;
     margin-right: 2%;
     margin-left: 2%;
@@ -232,6 +232,10 @@ body {
 
   .footer-main {
     margin-top: 3%;
+  }
+
+    .main-container {
+    padding-bottom: 10%;
   }
 }
 
@@ -283,5 +287,4 @@ body {
   .footer-main {
     margin-top: 3%;
   }
- 
 }
