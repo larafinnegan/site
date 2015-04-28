@@ -12,6 +12,11 @@ body {
   padding-bottom: 15%;
 }
 
+.navbar-toggle {
+  color: white;
+  background-color: #606060;
+}
+
 .outer {
   padding-top: 5%;
 }
@@ -175,10 +180,18 @@ body {
 
 /* small devices */
 
-@screen-xs-max {
+@media (max-width: 768px) {
   .name {
-    font-size: 2.5em;
+    font-size: 2em;
   }
+
+  .main-greeting {
+  font-size: 4.5em;
+}
+
+.smaller-greeting {
+  font-size: 3em;
+}
 }
 
 @media (max-width: 978px){
@@ -206,13 +219,13 @@ body {
   .nopadding {
     float: left;
     position: relative;
-    left: 47%;
+    left: 50%;
   }
 
   .circle {
     float: left;
     position: relative;
-    left: -47%;
+    left: -49%;
   }
 
   .three {
@@ -235,7 +248,7 @@ body {
   }
 
     .main-container {
-    padding-bottom: 10%;
+    padding-bottom: 15%;
   }
 }
 
