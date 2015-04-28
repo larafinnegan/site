@@ -9,81 +9,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header id="site-header">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 name">
-          Lara Finnegan
+      <header id="site-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 name">
+              Lara Finnegan
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle Navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Business Analyst | Web Developer</a>
+              </div> <!-- end div class="navbar-header" -->
+
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right top">
+                  <li><%= link_to "HOME", root_path %></li>
+                  <li><%= link_to "LINK" %></li>
+                  <li><%= link_to "LINK" %></li>
+                </ul>
+              </div> <!-- end div class="collapse navbar-collapse" -->
+
+            </div> <!-- end of col-->
+          </div><!-- end of row -->
+        </div><!-- end div class="container" -->
+      </div> <!-- end div class="navbar navbar-default navbar-fixed-top" -->
+
+      <div class="container main-container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <%= yield %>
+          </div><!-- /.container-fluid -->
         </div>
       </div>
-    </div>
-  </header>
-  <div class="navbar navbar-default navbar-static-top">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle Navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Business Analyst | Web Developer</a>
-          </div> <!-- end div class="navbar-header" -->
-
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right top">
-              <li><%= link_to "HOME", root_path %></li>
-              <li><%= link_to "LINK" %></li>
-              <li><%= link_to "LINK" %></li>
-            </ul>
-          </div> <!-- end div class="collapse navbar-collapse" -->
-
-        </div> <!-- end of col-->
-      </div><!-- end of row -->
-    </div><!-- end div class="container" -->
-  </div> <!-- end div class="navbar navbar-default navbar-fixed-top" -->
-
-
-  <div class="container main-container">
-  <div class="row outer">
-  <div class="col-md-10 col-md-offset-1">
-    <%= yield %>
-  </div><!-- /.container-fluid -->
-</div>
-</div>
-  <div class="footer">
-    <div class="container">
-      <div class="row footer-main">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="row">
-            <div class="col-xs-2 col-sm-2 col-md-1">
-              <span class="glyphicon glyphicon-earphone footerglyph"></span>
-            </div>
-            <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Call</b><br/>T: 207-504-6930</div>
-            <div class="col-xs-2 col-sm-2 col-md-1">
-              <span class="glyphicon glyphicon-envelope footerglyph"></span>
-            </div>
-            <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Contact</b><br/>lcfinnegan@gmail.com</div>
-            <div class="col-xs-2 col-sm-2 col-md-1">
-              <span class="glyphicon glyphicon-plus footerglyph"></span>
-            </div>
-            <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Social Media</b><br/>
+  
+    <div class="footer">
+      <div class="container">
+        <div class="row footer-main">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="row">
+              <div class="col-xs-2 col-sm-2 col-md-1">
+                <span class="glyphicon glyphicon-earphone footerglyph"></span>
+              </div>
+              <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Call</b><br/>T: 207-504-6930</div>
+              <div class="col-xs-2 col-sm-2 col-md-1">
+                <span class="glyphicon glyphicon-envelope footerglyph"></span>
+              </div>
+              <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Contact</b><br/>lcfinnegan@gmail.com</div>
+              <div class="col-xs-2 col-sm-2 col-md-1">
+                <span class="glyphicon glyphicon-plus footerglyph"></span>
+              </div>
+              <div class="col-xs-10 col-sm-10 col-md-2 text"><b>Social Media</b><br/>
                 <%= link_to image_tag("Linkedin.png", class: "img-responsive social-img"), "https://www.linkedin.com/in/larafinnegan", target: "_blank"  %>
                 <%= link_to image_tag("Github.png", class: "img-responsive social-img"), "https://github.com/larafinnegan", target: "_blank" %>
                 <%= link_to image_tag("Facebook.png", class: "img-responsive social-img"), "https://www.facebook.com/larafinnegan", target: "_blank" %>
                 <%= link_to image_tag("Googleplus.png", class: "img-responsive social-img"), "https://plus.google.com/u/0/+LaraFinnegan/posts", target: "_blank" %>
-                </div>
-            <div class="col-xs-2 col-sm-2 col-md-1">
-              <span class="glyphicon glyphicon-copyright-mark footerglyph"></span>
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-1">
+                <span class="glyphicon glyphicon-copyright-mark footerglyph"></span>
+              </div>
+              <div class="col-xs-10 col-sm-10 col-md-2 text">© 2015 by Lara Finnegan</div>
             </div>
-            <div class="col-xs-10 col-sm-10 col-md-2 text">© 2015 by Lara Finnegan</div>
           </div>
         </div>
-        </div>
-        </div>
-        </div>
+      </div>
+    </div>
 </body>
 </html>
