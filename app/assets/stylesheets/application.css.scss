@@ -12,8 +12,8 @@ body {
   padding-bottom: 15%;
 }
 
-.navbar-toggle {
-  color: white;
+.navbar-default .navbar-toggle {
+  border-color: white;
   background-color: #606060;
 }
 
@@ -104,7 +104,7 @@ body {
     float: left;
    }
 
-    .glyphicon {
+    .footerglyph {
     color: white;
   }
 
@@ -143,8 +143,9 @@ body {
   transition-delay: 0s, 0s;
 }
 
-.circletext {
+.circletext a{
   color: white;
+  text-decoration: none;
 }
 
 .circle1 {
@@ -195,6 +196,10 @@ body {
 
 .smaller-greeting {
   font-size: 3em;
+}
+
+.outer {
+  padding-bottom: 4%;
 }
 }
 
@@ -293,7 +298,7 @@ body {
    padding-left: 0 !important;
    }
 
-  .glyphicon {
+  .footerglyph {
     font-size: 1.8em;
     padding: 18%;
     background-color: #61CFD3;
