@@ -13,7 +13,16 @@ body {
 
 .main-container {
   padding-top: 5%;
-  padding-bottom: 7%;
+  padding-bottom: 3%;
+}
+
+.btn-primary {
+  background-color: rgba(232, 53, 86, 1);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #a2253c;
 }
 
 .navbar-default .navbar-toggle {

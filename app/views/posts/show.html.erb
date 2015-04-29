@@ -2,46 +2,34 @@
         <div class="row">
 
             <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+            <div class="col-lg-7 col-md-offset-1">
 
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1><%= @post.title %></h1>
-
-                <!-- Author -->
-                <p class="lead">
-                    by <%= link_to @post.user.name, about_path %>
-                </p>
-
-                <hr>
-
+                <h2><%= @post.title %></h2>
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on <% @post.created_at %></p>
-
-                <hr>
-
-                <!-- Preview Image -->
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-
+                <p><span class="glyphicon glyphicon-time"></span> Posted on <%= @post.created_at.strftime("%b %d, %Y") %></p>
                 <hr>
 
                 <!-- Post Content -->
                 <p class="lead"><%= @post.content %></p>
-
                 <hr>
 
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
-                <div class="well">
+                    <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                        <%= form_for [@post, @post.comments.build] do |f| %>
+                        <div class="field">
+                            <%= f.text_field :author %>
+                        </div><br/>
+                        <div class="field">
+                            <%= f.text_area :content, class: "form-control" %><br/>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                        <%= f.submit "Submit", class: "btn btn-primary" %>
+                    <% end %>
                 </div>
 
                 <hr>
@@ -49,43 +37,18 @@
                 <!-- Posted Comments -->
 
                 <!-- Comment -->
+                <% @post.comments.each do |comment| %>
                 <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
                     <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
+                        <h4 class="media-heading"><%= comment.author %>
+                            <small>replied <%= comment.inspect %><%= comment.created_at %></small>
                         </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <%= comment.content %>
                     </div>
                 </div>
+                <% end %>
 
                 <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        <!-- Nested Comment -->
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Nested Start Bootstrap
-                                    <small>August 25, 2014 at 9:30 PM</small>
-                                </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                        </div>
-                        <!-- End Nested Comment -->
-                    </div>
-                </div>
 
             </div>
 
