@@ -2,6 +2,7 @@
              <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-7 col-md-offset-1">
+            <%= will_paginate %>
                 <% @posts.each do |post| %>
                 <h3><%= link_to post.title, post_path(post) %></h3>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at.strftime("%b %d, %Y") %></p>
@@ -11,16 +12,7 @@
                 <hr>
                 <% end %>
 
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="#">← Older</a>
-                    </li>
-                    <li class="next">
-                        <a href="#">Newer →</a>
-                    </li>
-                </ul>
-
+                <%= will_paginate %>
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
@@ -76,8 +68,8 @@
 
                 <!-- Side Widget Well -->
                 <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    <h4>Why a blog?</h4>
+                    <p>As I'm working on new projects, I'm constantly picking up information and resources, so I'll post the highlights here for easy reference.</p>
                 </div>
 
             </div>

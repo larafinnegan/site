@@ -1,7 +1,13 @@
 class Comment < ActiveRecord::Base
-  belongs_to :post
+   before_save :cap_name
 
-  validates :author, presence: true
-  validates :content, presence: true
-  validates :post, presence: true
+  belongs_to :post
+  validates :author, :content, :post, presence: true
+
+
+  private
+
+  def cap_name
+    self.author = author.downcase.capitalize
+  end
 end
