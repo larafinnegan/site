@@ -16,9 +16,19 @@ body {
   padding-bottom: 3%;
 }
 
+.postbody {
+  line-height: 1.5em;
+  max-height: 4.9em;
+  overflow: hidden;
+}
+
 .btn-primary {
   background-color: rgba(232, 53, 86, 1);
   border: none;
+}
+
+.btn-primary:visited{
+  background-color: rgba(232, 53, 86, 1);
 }
 
 .btn-primary:hover {
