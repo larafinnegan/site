@@ -1,13 +1,8 @@
 class Comment < ActiveRecord::Base
-   before_save :cap_name
+   before_save { author.downcase.capitalize! }
 
   belongs_to :post
-  validates :author, :content, :post, presence: true
+  validates :content, :post, presence: true
+  validates :author, presence: true, length: { maximum: 50 }
 
-
-  private
-
-  def cap_name
-    self.author = author.downcase.capitalize
-  end
 end

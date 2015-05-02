@@ -1,0 +1,12 @@
+<h3>
+  <%= link_to post.title, post_path(post) %>
+</h3>
+<p>
+  <span class="glyphicon glyphicon-time"></span> 
+  Posted on <%= post.created_at.strftime("%b %d, %Y") %>
+</p>
+<p class="postbody"><%= post.content %></p>
+<button type="button" class="btn btn-primary">
+  <%= link_to "Read More ", post_path(post), class: "button-text-color" %><span class="glyphicon glyphicon-chevron-right"></span>
+</button>
+<hr>
