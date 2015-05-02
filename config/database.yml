@@ -6,8 +6,11 @@
 #
 development: &development
   adapter: postgresql
+  host: localhost
   encoding: unicode
   database: site_development
+  username: lcf0285
+  password: A8037lcf
   timeout: 5000
   pool: 5
 
