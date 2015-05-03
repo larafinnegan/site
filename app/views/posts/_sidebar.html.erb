@@ -7,26 +7,25 @@
     </div>
     <!-- Blog Categories Well -->
     <div class="well">
-        <h4>Blog Categories</h4>
+        <h4>Categories</h4>
         <div class="row">
             <div class="col-lg-6">
+            <% @tags.find_each do |tag| %>
                 <ul class="list-unstyled">
-                    <%= @tags.find_each do |tag| %>
+
+                    <% if tag.id.even? %>
                         <li><%= link_to tag.name, {controller:"posts", action:"index", tag: tag.id } %></li>
-                    <% end %>
+                    
                 </ul>
             </div>
             <div class="col-lg-6">
+            <% else %>
                 <ul class="list-unstyled">
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
+                
+                    <li><%= link_to tag.name, {controller:"posts", action:"index", tag: tag.id } %></li>
+                    <% end %>
                 </ul>
+                <% end %>
             </div>
         </div>
         <!-- /.row -->

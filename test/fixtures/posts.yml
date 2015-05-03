@@ -1,9 +1,9 @@
-first_user:
+first:
   title: "title"
   content: "content"
   created_at: <%= 10.minutes.ago %>
 
-second_user:
+second:
   title: "title2"
   content: "content2"
   created_at: <%= 3.hours.ago %>
@@ -12,3 +12,9 @@ most_recent:
   title: "title3"
   content: "content3"
   created_at: <%= Time.zone.now %>
+
+<% 30.times do |n| %>
+post_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 3.days.ago %>
+<% end %>

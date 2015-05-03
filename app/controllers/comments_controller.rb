@@ -9,9 +9,6 @@ class CommentsController < ApplicationController
       render @post
   end
 
-  def destroy
-  end
-
   private
 
   def comments_params
