@@ -22,6 +22,15 @@ body {
   overflow: hidden;
 }
 
+.post-title {
+  color: #606060;
+}
+
+.post-title:hover {
+  color: #61CFD3;
+  text-decoration: none;
+}
+
 .button-text-color {
   color: white;
   text-decoration: none;
@@ -294,7 +303,7 @@ body {
   }
 
   .navbar-default .navbar-nav > li > a {
-    color: #C3BFBE;
+    color: #7e7e7e;
   }
 
   .navbar-default .navbar-nav > li > a:hover {
