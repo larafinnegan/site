@@ -3,13 +3,21 @@ require 'test_helper'
 class CommentTest < ActiveSupport::TestCase
   
   def setup
-    @comment = Comment.new
+    @post = posts(:first)
+    @comment = @post.comments.build(author: "frank", content: "Awesome post!")
   end
 
-  test "comment author names should be saved as lower-case with the first letter capitalized" do
-    author = "vAnAmAkU"
-    @comment.author = author
-    @comment.save
-    assert_equal author.downcase.capitalize, @comment.reload.author
+  test "should be valid" do 
+    assert @comment.valid?
+  end
+
+  test "author should not be blank" do 
+    @comment.author = "   "
+    assert_not @comment.valid?
+  end
+
+  test "content should not be blank" do 
+    @comment.content = "   "
+    assert_not @comment.valid?
   end
 end

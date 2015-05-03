@@ -1,5 +1,4 @@
 class Comment < ActiveRecord::Base
-   before_save { self.author = author.downcase.capitalize! }
 
   belongs_to :post
   validates :content, :post, :post_id, presence: true

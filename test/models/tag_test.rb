@@ -3,7 +3,7 @@ require 'test_helper'
 class TagTest < ActiveSupport::TestCase
   
   def setup
-    @tag = Tag.new(name: "HTML")
+    @tag = Tag.new(name: "Rails")
   end
 
   test "tag is valid" do 
