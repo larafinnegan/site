@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments 
   end
+
+  resources :tags
   
   get 'projects' => 'static_pages#projects'
   get 'about' => 'static_pages#about'

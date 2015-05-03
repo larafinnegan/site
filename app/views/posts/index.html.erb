@@ -1,14 +1,14 @@
 <% provide(:title, "Blog") %>
 
-             <div class="row">
-            <!-- Blog Entries Column -->
-            <div class="col-md-7 col-md-offset-1">
-                <%= render @posts %>
+<div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-7 col-md-offset-1">
+        <%= render @posts %>
 
-                <%= will_paginate %>
-            </div>
+        <%= will_paginate %>
+    </div>
 
-            <!-- Blog Sidebar Widgets Column -->
-            <%= render "posts/sidebar" %>
-        </div>
-        <!-- /.row -->
+    <!-- Blog Sidebar Widgets Column -->
+    <%= render "posts/sidebar" %>
+</div>
+<!-- /.row -->
