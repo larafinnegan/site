@@ -8,5 +8,8 @@ class Post < ActiveRecord::Base
 
   default_scope -> { order(created_at: :desc) }
   
+  def add_tag(input)
+    self.tags << Tag.find_or_create_by(name: input)
+  end
 
 end

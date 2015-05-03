@@ -2,6 +2,7 @@
 
 html:
   name: "HTML"
+  posts: first
 
 css:
   name: "CSS"

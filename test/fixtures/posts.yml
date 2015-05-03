@@ -1,6 +1,7 @@
 first:
   title: "title"
   content: "content"
+  tags: html
   created_at: <%= 10.minutes.ago %>
 
 second:
