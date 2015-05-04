@@ -9,8 +9,8 @@ development: &development
   host: localhost
   encoding: unicode
   database: site_development
-  username: lcf0285
-  password: A8037lcf
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   timeout: 5000
   pool: 5
 
