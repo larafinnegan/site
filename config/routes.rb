@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   get 'projects' => 'static_pages#projects'
   get 'about' => 'static_pages#about'
   root 'static_pages#home'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
 
 
 
