@@ -134,7 +134,7 @@ body {
   border-top: 2px solid white;
 }
 
- .text {
+ .text , .text > a{
    text-align: left;
    color: white;
    font-size: 0.9em;
