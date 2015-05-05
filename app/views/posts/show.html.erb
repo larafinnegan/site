@@ -13,6 +13,9 @@
 
                 <!-- Post Content -->
                 <p><%= raw(@post.content) %></p>
+                <% if logged_in? %>
+                    <%= link_to "Edit", edit_post_path(@post) %>
+                <% end %>
                 <hr>
 
                 <!-- Blog Comments -->
