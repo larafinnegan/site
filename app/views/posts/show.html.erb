@@ -28,7 +28,8 @@
                 <!-- Comments Form -->
                     <div class="well">
                     <h4>Leave a Comment:</h4>
-                        <%= form_for [@post, @post.comments.new] do |f| %>
+                        <%= form_for [@post, @post.comments.build] do |f| %>
+                        <%= render 'layouts/error_messages', target: @post %>
                         <div class="field">
                             <%= f.text_field :author, class: "form-control", placeholder: "Name" %>
                         </div><br/>
