@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :logged_in_user, only: [:destroy]
 
   def create
     @post = Post.find(params[:post_id])
@@ -8,6 +9,11 @@ class CommentsController < ApplicationController
     else
       render @post
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id]).destroy
+    redirect_to posts_path
   end
 
   private

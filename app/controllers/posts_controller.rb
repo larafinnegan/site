@@ -42,17 +42,15 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def destroy
+    @post = Post.find(params[:id]).destroy
+    redirect_to posts_path
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :content, :tags)
-  end
-
-  def logged_in_user
-    unless logged_in?
-      flash[:danger] = "Only admins may create and edit posts"
-      redirect_to root_url
-    end
   end
 
 end
