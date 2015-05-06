@@ -5,4 +5,9 @@ module ApplicationHelper
     number = "+1-#{sets_of_numbers.join('-')}"
     link_to text, "tel:#{number}"
   end
+
+  def markdown(text)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown.render(text).html_safe
+  end
 end

@@ -12,11 +12,15 @@
                 <hr>
 
                 <!-- Post Content -->
-                <p><%= raw(@post.content) %></p>
+                <p><%= markdown(@post.content) %></p>
                 <% if logged_in? %>
                     <%= link_to "Edit", edit_post_path(@post) %>
                 <% end %>
                 <hr>
+                <p><b>Tags: </b><% @post.tags.each do |tag| %>
+                    <%= link_to tag.name, {controller:"posts", action:"index", tag: tag.id }, class: "post-title" %>&nbsp;&nbsp;
+                    <% end %> 
+                </p>
 
                 <!-- Blog Comments -->
 
@@ -28,7 +32,7 @@
                             <%= f.text_field :author, class: "form-control", placeholder: "Name" %>
                         </div><br/>
                         <div class="field">
-                            <%= f.text_area :content, class: "form-control", placeholder: "Your comment here..." %><br/>
+                            <%= f.text_area :content, class: "form-control", rows: 5, placeholder: "Your comment here..." %><br/>
                         </div>
                         <%= f.submit "Submit", class: "btn btn-primary" %>
                     <% end %>
@@ -45,7 +49,7 @@
                         <h4 class="media-heading"><%= comment.author %>
                             <small>replied on <%= comment.created_at.strftime("%b %d, %Y") %></small>
                         </h4>
-                        <%= comment.content %>
+                        <%= markdown(comment.content) %>
                     </div>
                 </div>
                 <% end %>
