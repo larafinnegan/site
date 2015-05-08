@@ -9,46 +9,46 @@
       <div class="col-md-12 col-xs-12 nopadding">
         <div class="circle circle1">
           <div class="circletext"><%= link_to "ABOUT", about_path %></div >
-          </div>
-          <div class="circle circle2">
-            <div class="circletext"><%= link_to "BLOG", posts_path %></div >
-            </div>
-            <div class="circle circle3">
-              <div class="circletext"><%= link_to "PROJECTS", projects_path %></div >
-              </div>
-            </div>
-          </div><!-- end 3 circles -->
+        </div>
+        <div class="circle circle2">
+          <div class="circletext"><%= link_to "BLOG", posts_path %></div >
+        </div>
+        <div class="circle circle3">
+          <div class="circletext"><%= link_to "PROJECTS", projects_path %></div >
+        </div>
+      </div>
+    </div><!-- end 3 circles -->
 
-          <div class="hidden-sm hidden-xs visible-md visible-lg about">
-            <%= render 'static_pages/blurb' %>
-          </div>
-        </div><!-- end second column -->
+    <div class="hidden-sm hidden-xs visible-md visible-lg about">
+      <%= render 'static_pages/blurb' %>
+    </div>
+  </div><!-- end second column -->
 
-        <div class="col-md-6 col-md-pull-6 big-circle">
-          <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="col-md-6 col-md-pull-6 big-circle">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
             <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <%= image_tag("lake.png", class: "img-responsive main-img img-circle") %>
-              </div>
-
-              <div class="item">
-                <%= image_tag("yosemite.png", class: "img-responsive main-img img-circle") %>
-              </div>
-
-              <div class="item">
-                <%= image_tag("ridge.png", class: "img-responsive main-img img-circle") %>
-              </div>
-
-              <div class="item">
-                <%= image_tag("halfdome.png", class: "img-responsive main-img img-circle") %>
-              </div>
-            </div>
-          </div><!-- end carousel-->
-          <div class="about visible-sm visible-xs hidden-md hidden-lg">
-            <%= render 'static_pages/blurb' %>
-          </div>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag("lake.png", class: "img-responsive main-img img-circle") %>
         </div>
-      </div><!-- end row -->
+
+        <div class="item">
+          <%= image_tag("yosemite.png", class: "img-responsive main-img img-circle") %>
+        </div>
+
+        <div class="item">
+          <%= image_tag("ridge.png", class: "img-responsive main-img img-circle") %>
+        </div>
+
+        <div class="item">
+          <%= image_tag("halfdome.png", class: "img-responsive main-img img-circle") %>
+        </div>
+      </div>
+    </div><!-- end carousel-->
+    <div class="about visible-sm visible-xs hidden-md hidden-lg">
+      <%= render 'static_pages/blurb' %>
+    </div>
+  </div>
+</div><!-- end row -->
 <!-- end outer row -->
