@@ -202,7 +202,7 @@ body {
   transition-delay: 0s, 0s;
 }
 
-.circletext a{
+.circletext {
   color: white;
   text-decoration: none;
 }
@@ -293,16 +293,13 @@ body {
     padding-top: 5%;
   }
 
-  .nopadding {
-    float: left;
-    position: relative;
-    left: 50%;
+  .circle1 {
+  margin-left: 6%;
   }
 
   .circle {
     float: left;
-    position: relative;
-    left: -50%;
+    text-align: center;
   }
 
   .about {

@@ -1,21 +1,27 @@
 <% provide(:title, "Home") %>
 
 <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-push-6">
+  <div class="col-md-6 col-lg-6 col-md-push-6">
     <p class="main-greeting">Hello,</p>
     <p class="smaller-greeting">a bit about me...</p>
 
     <div class="row three">
       <div class="col-md-12 col-xs-12 nopadding">
+      <%= link_to about_path do %>
         <div class="circle circle1">
-          <div class="circletext"><%= link_to "ABOUT", about_path %></div >
+          <div class="circletext">ABOUT</div >
         </div>
+        <% end %>
+        <%= link_to posts_path do %>
         <div class="circle circle2">
-          <div class="circletext"><%= link_to "BLOG", posts_path %></div >
+          <div class="circletext">BLOG</div >
         </div>
+        <% end %>
+        <%= link_to projects_path do %>
         <div class="circle circle3">
-          <div class="circletext"><%= link_to "PROJECTS", projects_path %></div >
+          <div class="circletext">PROJECTS</div >
         </div>
+        <% end %>
       </div>
     </div><!-- end 3 circles -->
 
