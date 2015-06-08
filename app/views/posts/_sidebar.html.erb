@@ -1,31 +1,22 @@
 <div class="col-md-4">
 
-<!-- Side Widget Well -->
+    <!-- Side Widget Well -->
     <div class="well">
         <h4>Why a blog?</h4>
-                    <p>As I'm working on new projects, I'm constantly picking up information and resources, so I'll post the highlights here for easy reference.</p>
+        <p>As I'm working on new projects, I'm constantly picking up information and resources, so I'll post the highlights here for easy reference.</p>
     </div>
     <!-- Blog Categories Well -->
     <div class="well">
         <h4>Categories   <small><%= link_to " (View All)", posts_path, class: "post-title" %></small></h4>
         <div class="row">
-            <div class="col-lg-6">
-            <% @tags.find_each do |tag| %>
-                <ul class="list-unstyled">
-                <% if tag.id.even? %>
-                    <li><%= link_to tag.name, {controller:"posts", action:"index", tag: tag.id }, class: "post-title" %></li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-            <% else %>
-                <ul class="list-unstyled">
-                    <li><%= link_to tag.name, {controller:"posts", action:"index", tag: tag.id }, class: "post-title" %></li>
-                    <% end %>
-                </ul>
+            <div class="col-lg-12">
+                <% @tags.find_each do |tag| %>
+                <button class="btn btn-xs">
+                    <%= link_to tag.name, {controller:"posts", action:"index", tag: tag.id }, class: "post-title" %>
+                </button>
                 <% end %>
             </div>
         </div>
-        <!-- /.row -->
     </div>
-
+    <!-- /.row -->
 </div>
